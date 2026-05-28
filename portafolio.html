@@ -253,6 +253,52 @@
             }
         }
 
+        /* NUEVOS ESTILOS PARA EL MODAL DE HALOO (DISEÑO HORIZONTAL) */
+        .modal-content {
+            background-color: #130f26;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 28px;
+            color: #fff;
+        }
+        .modal-header {
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            padding: 25px 25px 15px;
+        }
+        .modal-body {
+            padding: 25px;
+        }
+        .btn-close-white {
+            filter: invert(1) grayscale(1) brightness(2);
+        }
+        .modal-project-desc {
+            color: rgba(255, 255, 255, 0.75);
+            font-size: 0.95rem;
+            line-height: 1.7;
+        }
+        
+        /* Ajustes precisos para las imágenes deslizantes */
+        .carousel-item {
+            max-height: 450px;
+            border-radius: 16px;
+            overflow: hidden;
+            background-color: rgba(0,0,0,0.2);
+        }
+        .carousel-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain; /* Evita que las imágenes se deformen sin importar su tamaño */
+            max-height: 450px;
+        }
+        .carousel-control-prev, .carousel-control-next {
+            width: 10%;
+        }
+        .carousel-control-prev-icon, .carousel-control-next-icon {
+            background-color: rgba(11, 8, 19, 0.7);
+            padding: 20px;
+            border-radius: 50%;
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+
         /* BOTONES FLOTANTES PERMANENTES OPTIMIZADOS */
         .floating-social-bar {
             position: fixed;
@@ -394,7 +440,13 @@
             <div class="row g-4" id="portfolio-container"> 
                 
                 <div class="col-12 col-sm-6 col-lg-4 portfolio-item-wrapper" data-category="branding" data-aos="fade-up">
-                    <div class="portfolio-item aspect-editorial-square">
+                    <div class="portfolio-item aspect-editorial-square" 
+                         data-bs-toggle="modal" 
+                         data-bs-target="#projectModal"
+                         data-title="Sephora Experience"
+                         data-category="Branding / Identidad"
+                         data-desc="Esta es la descripción detallada y larga de Sephora Experience. Aquí puedes expandir todo lo que requieras explicar sobre el desarrollo, metas y resultados finales del proyecto. Ahora posicionada en la sección inferior para dar prioridad visual al slider horizontal."
+                         data-images="https://images.unsplash.com/photo-1522542550221-31fd19575a2d?q=80&w=1000,https://images.unsplash.com/photo-1512496015851-a90fb38ba796?q=80&w=1000">
                         <div class="portfolio-img-wrapper">
                             <img src="https://images.unsplash.com/photo-1522542550221-31fd19575a2d?q=80&w=1000&auto=format&fit=crop" alt="Proyecto Branding" class="portfolio-img">
                         </div>
@@ -406,7 +458,13 @@
                 </div>
 
                 <div class="col-12 col-sm-6 col-lg-4 portfolio-item-wrapper" data-category="produccion" data-aos="fade-up" data-aos-delay="100">
-                    <div class="portfolio-item aspect-editorial-square">
+                    <div class="portfolio-item aspect-editorial-square"
+                         data-bs-toggle="modal" 
+                         data-bs-target="#projectModal"
+                         data-title="Lanzamiento Akron"
+                         data-category="Producción / Eventos"
+                         data-desc="Descripción profunda sobre el Lanzamiento Akron. Producción de escenario, logística integral y branding espacial diseñado por HALOO en 2026."
+                         data-images="https://images.unsplash.com/photo-1511578314322-379afb476865?q=80&w=1000,https://images.unsplash.com/photo-1540575467063-178a50c2df87?q=80&w=1000">
                         <div class="portfolio-img-wrapper">
                             <img src="https://images.unsplash.com/photo-1511578314322-379afb476865?q=80&w=1000&auto=format&fit=crop" alt="Proyecto Production" class="portfolio-img">
                         </div>
@@ -418,7 +476,13 @@
                 </div>
 
                 <div class="col-12 col-sm-6 col-lg-4 portfolio-item-wrapper" data-category="marketing" data-aos="fade-up" data-aos-delay="200">
-                    <div class="portfolio-item aspect-editorial-square">
+                    <div class="portfolio-item aspect-editorial-square"
+                         data-bs-toggle="modal" 
+                         data-bs-target="#projectModal"
+                         data-title="Campaña Clikalia"
+                         data-category="Marketing Digital"
+                         data-desc="Estrategia digital robusta para Clikalia enfocada en conversión de leads calificados mediante pauta digital y optimización de embudos."
+                         data-images="https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1000">
                         <div class="portfolio-img-wrapper">
                             <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1000&auto=format&fit=crop" alt="Proyecto Marketing" class="portfolio-img">
                         </div>
@@ -430,7 +494,13 @@
                 </div>
 
                 <div class="col-12 col-sm-6 col-lg-4 portfolio-item-wrapper" data-category="branding" data-aos="fade-up">
-                    <div class="portfolio-item aspect-editorial-square">
+                    <div class="portfolio-item aspect-editorial-square"
+                         data-bs-toggle="modal" 
+                         data-bs-target="#projectModal"
+                         data-title="Identidad Belif"
+                         data-category="Branding"
+                         data-desc="Diseño de logotipo, tipografías corporativas y manual de marca conceptualizado para Belif."
+                         data-images="https://images.unsplash.com/photo-1626785774573-4b799315345d?q=80&w=1000">
                         <div class="portfolio-img-wrapper">
                             <img src="https://images.unsplash.com/photo-1626785774573-4b799315345d?q=80&w=1000&auto=format&fit=crop" alt="Proyecto Branding 2" class="portfolio-img">
                         </div>
@@ -442,7 +512,13 @@
                 </div>
 
                 <div class="col-12 col-sm-6 col-lg-4 portfolio-item-wrapper" data-category="produccion" data-aos="fade-up" data-aos-delay="100">
-                    <div class="portfolio-item aspect-editorial-square">
+                    <div class="portfolio-item aspect-editorial-square"
+                         data-bs-toggle="modal" 
+                         data-bs-target="#projectModal"
+                         data-title="Stand Sensorial ITK"
+                         data-category="Producción"
+                         data-desc="Experiencia inmersiva en eventos físicos usando tecnologías interactivas y arquitectura efímera avanzada."
+                         data-images="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?q=80&w=1000">
                         <div class="portfolio-img-wrapper">
                             <img src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?q=80&w=1000&auto=format&fit=crop" alt="Proyecto Produccion 2" class="portfolio-img">
                         </div>
@@ -454,7 +530,13 @@
                 </div>
 
                 <div class="col-12 col-sm-6 col-lg-4 portfolio-item-wrapper" data-category="marketing" data-aos="fade-up" data-aos-delay="200">
-                    <div class="portfolio-item aspect-editorial-square">
+                    <div class="portfolio-item aspect-editorial-square"
+                         data-bs-toggle="modal" 
+                         data-bs-target="#projectModal"
+                         data-title="Estrategia BF"
+                         data-category="Marketing / Estrategia"
+                         data-desc="Consultoría integral 360° para el reposicionamiento omnicanal de la marca comercial BF."
+                         data-images="https://images.unsplash.com/photo-1551836022-d5d88e9218df?q=80&w=1000">
                         <div class="portfolio-img-wrapper">
                             <img src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?q=80&w=1000&auto=format&fit=crop" alt="Proyecto Marketing 2" class="portfolio-img">
                         </div>
@@ -468,6 +550,43 @@
             </div>
         </div>
     </section>
+
+    <div class="modal fade" id="projectModal" tabindex="-1" aria-labelledby="projectModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div>
+                        <span id="modalProjectCategory" class="project-category d-block mb-1">Categoría</span>
+                        <h3 class="modal-title" id="projectModalLabel">Título del Proyecto</h3>
+                    </div>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-12">
+                            <div id="carouselProjectImages" class="carousel slide" data-bs-ride="false">
+                                <div class="carousel-inner" id="modalCarouselInner">
+                                    </div>
+                                <button class="carousel-control-prev" type="button" data-bs-target="#carouselProjectImages" data-bs-slide="prev">
+                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Anterior</span>
+                                </button>
+                                <button class="carousel-control-next" type="button" data-bs-target="#carouselProjectImages" data-bs-slide="next">
+                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Siguiente</span>
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <div class="col-12 mt-4">
+                            <h5 style="font-family: 'Space Grotesk', sans-serif; color: var(--accent-color); font-weight: 600;">Sobre el proyecto</h5>
+                            <p id="modalProjectDesc" class="modal-project-desc">Descripción extensa...</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <footer id="contacto">
         <div class="container">
@@ -531,6 +650,52 @@
                 });
             });
         });
+
+        // NUEVO SCRIPT ACTUALIZADO PARA CAROUSEL COMPATIBLE CON EL MODAL
+        const projectModal = document.getElementById('projectModal');
+        if (projectModal) {
+            projectModal.addEventListener('show.bs.modal', function (event) {
+                const card = event.relatedTarget;
+                
+                const title = card.getAttribute('data-title');
+                const category = card.getAttribute('data-category');
+                const desc = card.getAttribute('data-desc');
+                const imagesString = card.getAttribute('data-images');
+                
+                const modalTitle = projectModal.querySelector('#projectModalLabel');
+                const modalCategory = projectModal.querySelector('#modalProjectCategory');
+                const modalDesc = projectModal.querySelector('#modalProjectDesc');
+                const carouselInner = projectModal.querySelector('#modalCarouselInner');
+                
+                modalTitle.textContent = title;
+                modalCategory.textContent = category;
+                modalDesc.textContent = desc;
+                
+                // Limpieza del contenedor deslizante anterior
+                carouselInner.innerHTML = ''; 
+                
+                if (imagesString) {
+                    const imagesArray = imagesString.split(','); 
+                    imagesArray.forEach((url, index) => {
+                        // Crear elemento contenedor requerido por Bootstrap (.carousel-item)
+                        const carouselItem = document.createElement('div');
+                        carouselItem.classList.add('carousel-item');
+                        
+                        // La primera imagen procesada obligatoriamente debe llevar la clase 'active'
+                        if (index === 0) {
+                            carouselItem.classList.add('active');
+                        }
+                        
+                        const imgElement = document.createElement('img');
+                        imgElement.src = url.trim();
+                        imgElement.alt = `Imagen ${index + 1} de ${title}`;
+                        
+                        carouselItem.appendChild(imgElement);
+                        carouselInner.appendChild(carouselItem);
+                    });
+                }
+            });
+        }
     </script>
 </body>
 </html>
